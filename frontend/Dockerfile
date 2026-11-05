@@ -34,6 +34,7 @@ COPY --from=deps /web-aql-docs/frontend .
 # To generate docs
 # RUN npm run docs
 
+RUN mkdir -p src/components
 COPY --from=lib /components/react-component-lib src
 
 RUN npm run build
